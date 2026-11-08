@@ -7,9 +7,8 @@
 
     <meta name="author" content="Qihang Rao">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
   </head>
 
   <body>
@@ -20,21 +19,21 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
-                  Qihang Rao (饶启杭)
+                  Qihang Rao
                 </p>
                 <h2 style="color: purple; text-transform: uppercase;">About me</h2>
                 <p>
-    I am a senior undergraduate student in the <a href="https://ivg.au.tsinghua.edu.cn/">i-Vision Group</a> at the Department of Automation, Tsinghua University, 
+    I am a senior undergraduate student in the <a href="https://ivg.au.tsinghua.edu.cn/">i-Vision Group</a> at the Department of Automation, Tsinghua University,
     under the guidance of Professor <a href="https://ivg.au.tsinghua.edu.cn/Jiwen_Lu/">Jiwen Lu</a>.
                 </p>
                 <h2 style="color: purple; text-transform: uppercase;">Research</h2>
                 <p>
-    My research interests span across computer vision and deep learning theory. Currently, I am focusing on the intersection of these two fields, 
-    particularly in the area of VQ-VAEs and diffusion models.
+    My research interests include computer vision, deep learning theory, visual generation, and physical intelligence.
+    I am particularly interested in visual tokenizers, VQ-VAEs, and diffusion models.
                 </p>
                 <h2 style="color: purple; text-transform: uppercase;">Interest</h2>
                 <p>
-    Outside of research, I have a passion for sports and am particularly skilled in track and field as well as basketball. 
+    Outside of research, I have a passion for sports and am particularly skilled in track and field as well as tennis.
     I also enjoy traveling, embracing the unexpected encounters along the journey, and capturing these moments with my camera.
                 </p>
                 <p style="text-align:center">
@@ -52,7 +51,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2 style="color: purple; text-transform: uppercase;">Preprints</h2>
+                <h2 style="color: purple; text-transform: uppercase;">Publications and Preprints</h2>
               </td>
             </tr>
           </tbody></table>
@@ -66,6 +65,24 @@
 
             <tr>
                <td style="padding:16px;width:20%;text-align:center;vertical-align:middle">
+                 <img src="images/sftok_head.png" width="160" style="max-width:100%;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="SFTok overview">
+               </td>
+               <td style="padding:8px;width:80%;vertical-align:middle">
+                 <a href="https://arxiv.org/abs/2512.16910"><span class="papertitle">SFTok: Bridging the Performance Gap in Discrete Tokenizers</span></a><br>
+                 <strong>Qihang Rao</strong><span style="color:red">*</span>,
+                 <a href="https://boruizhang.site/">Borui Zhang</a><span style="color:red">*</span>,
+                 <a href="https://wzzheng.net">Wenzhao Zheng</a>,
+                 <a href="https://scholar.google.com/citations?user=6a79aPwAAAAJ&amp;hl=en&amp;authuser=1">Jie Zhou</a>,
+                 <a href="https://ivg.au.tsinghua.edu.cn/Jiwen_Lu/">Jiwen Lu</a><br>
+                 <em>arXiv</em>, 2025<br>
+                 <a href="https://arxiv.org/pdf/2512.16910">[Paper]</a> /
+                 <a href="https://github.com/Neur-IO/SFTok">[Code]</a> /
+                 <a href="https://neur-io.github.io/SFTok/">[Project Page]</a>
+                 <p>SFTok introduces iterative reconstruction and self-forcing training for discrete visual tokenization. With only <strong>64 tokens per image</strong>, it achieves <strong>1.21 rFID</strong> on ImageNet and <strong>2.29 gFID</strong> in class-conditional image generation.</p>
+               </td>
+            </tr>
+            <tr>
+               <td style="padding:16px;width:20%;text-align:center;vertical-align:middle">
                  <img src="images/revq_head.png" width="160" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                </td>
                <td style="padding:8px;width:80%;vertical-align:middle">
@@ -73,7 +90,7 @@
                    <span class="papertitle">Quantize-then-Rectify: Efficient VQ-VAE Training</span>
                  </a>
                  <br>
-                 <a href="https://boruizhang.site/">Borui Zhang</a>,
+                 <a href="https://boruizhang.site/">Borui Zhang</a><span style="color:red">*</span>,
                  <strong>Qihang Rao</strong><span style="color:red">*</span>,
                  <a href="https://wzzheng.net">Wenzhao Zheng</a>,
                  <a href="https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1">Jie Zhou</a>,
@@ -85,18 +102,32 @@
                  /
                  <a href="https://github.com/Neur-IO/ReVQ">[Code]</a>
                  /
-                 <a href="https://neur-io.github.io/ReVQ/">[Project Page]</a> 
+                 <a href="https://neur-io.github.io/ReVQ/">[Project Page]</a>
                  /
                  <a href="https://huggingface.co/spaces/AndyRaoTHU/ReVQ">[HF Demo]</a>
                  /
-                 <a href="https://zhuanlan.zhihu.com/p/1910111424765728444">[中文解读]</a>
+                 <a href="https://zhuanlan.zhihu.com/p/1910111424765728444">[Chinese Overview]</a>
                  <p></p>
                  <p>
-	          	This study presents <strong><span style="background-color:yellow; color:red;">ReVQ</span></strong>, 
-              a framework that enables efficient VQ-VAE training by leveraging pre-trained VAEs, 
-              compressing ImageNet images into 512 tokens while maintaining competitive reconstruction quality (<strong><span style="background-color:yellow; color:red;">rFID=1.06</span></strong>).
-              ReVQ reduces training costs by over two orders of magnitude, completing full training on a single NVIDIA 4090 within <strong><span style="background-color:yellow; color:red;">22 hours</span></strong>.
+              This study presents <strong>ReVQ</strong>,
+              a framework that enables efficient VQ-VAE training by leveraging pre-trained VAEs,
+              compressing ImageNet images into 512 tokens while maintaining competitive reconstruction quality (<strong>rFID=1.06</strong>).
+              ReVQ reduces training costs by over two orders of magnitude, completing full training on a single NVIDIA 4090 within <strong>22 hours</strong>.
                  </p>
+               </td>
+             </tr>
+             <tr>
+               <td style="padding:16px;width:20%;text-align:center;vertical-align:middle">
+                 <img src="images/bort_head.png" width="160" style="max-width:100%;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Bort overview">
+               </td>
+               <td style="padding:8px;width:80%;vertical-align:middle">
+                 <a href="https://ieeexplore.ieee.org/document/11397554/"><span class="papertitle">Alignment-Invertibility Regularization for Explainable Neural Networks</span></a><br>
+                 <a href="https://boruizhang.site/">Borui Zhang</a>, <strong>Qihang Rao</strong>,
+                 <a href="https://scholar.google.com/citations?user=6a79aPwAAAAJ&amp;hl=en&amp;authuser=1">Jie Zhou</a>,
+                 <a href="https://ivg.au.tsinghua.edu.cn/Jiwen_Lu/">Jiwen Lu</a><br>
+                 <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</em>, 2026<br>
+                 <a href="https://ieeexplore.ieee.org/document/11397554/">[Paper]</a>
+                 <p>This work formalizes explainability through alignment and invertibility, and introduces <strong>Bort</strong>, an optimizer that enforces boundedness and orthogonality constraints to improve model explainability while maintaining classification performance.</p>
                </td>
              </tr>
           </tbody></table>
@@ -106,19 +137,21 @@
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2 style="color: purple; text-transform: uppercase;">Honors and Awards</h2>
                 <ul style="padding-left: 20px;">
-                  <li style="margin-bottom: 10px;">
-                    2024 National Scholarship (highest scholarship given by the government of China)
-                  </li>
-                  <li style="margin-bottom: 10px;">
-                    2023 Tsinghua University Comprehensive Excellence Scholarship (scholarship for juniors in Tsinghua)
-                  </li>
+                  <li style="margin-bottom: 10px;">Tsinghua University Future Scholars Fellowship for Incoming PhD Students, 2026</li>
+                  <li style="margin-bottom: 10px;">Outstanding Graduate of Beijing, 2026</li>
+                  <li style="margin-bottom: 10px;">Outstanding Graduate of Tsinghua University, 2026</li>
+                  <li style="margin-bottom: 10px;">Outstanding Student Leader, Tsinghua University, 2026</li>
+                  <li style="margin-bottom: 10px;">Tsinghua University Comprehensive Excellence Scholarship, 2025 and 2023</li>
+                  <li style="margin-bottom: 10px;">National Scholarship, 2024</li>
+                  <li style="margin-bottom: 10px;">Tsinghua University Freshman Scholarship, 2022</li>
+                  <li style="margin-bottom: 10px;">Gold Medal and National Training Team, Chinese Chemistry Olympiad, 2021</li>
                 </ul>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<!-- 
+<!--
     <tr onmouseout="bolt3d_stop()" onmouseover="bolt3d_start()"  bgcolor="#ffffd0">
       <td style="padding:16px;width:20%;vertical-align:middle">
         <div class="one">
@@ -152,7 +185,7 @@
         <a href="https://github.com/ArthurBrussee">Arthur Brussee</a>,
         <a href="https://holynski.org">Aleksander Holynski</a>,
         <a href="https://ricardomartinbrualla.com">Ricardo Martin-Brualla</a>,
-		<strong>Jonathan T. Barron</strong>,
+    <strong>Jonathan T. Barron</strong>,
         <a href="https://henzler.github.io">Philipp Henzler</a>
         <br>
         <em>ICCV</em>, 2025
@@ -162,7 +195,7 @@
         <a href="https://szymanowiczs.github.io/bolt3d">arXiv</a>
         <p></p>
         <p>
-		By training a latent diffusion model to directly output 3D Gaussians we enable fast (~6 seconds on a single GPU) feed-forward 3D scene generation.
+    By training a latent diffusion model to directly output 3D Gaussians we enable fast (~6 seconds on a single GPU) feed-forward 3D scene generation.
         </p>
       </td>
     </tr> -->
@@ -173,7 +206,7 @@
               <td style="padding:0px">
                 <br>
                 <p style="text-align:center;font-size:small;">
-                  © Qihang Rao | Last updated: Jul. 14, 2025
+                  © Qihang Rao | Last updated: Nov. 8, 2026
                 </p>
                 <p style="text-align:center;font-size:small;">
                   Website template from <a href="https://jonbarron.info/">Jon Barron</a>
